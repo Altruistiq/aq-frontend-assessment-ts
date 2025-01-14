@@ -27,10 +27,13 @@ Create a chart animating carbon footprint per country throughout the years. The 
 
 2. Clone this repo, then `npm i` and `npm run dev` to start a development app (uses Vite, Vue 3 and Pinia)
 
-3. Use the 2 API calls provided in the store to get a list of countries and to get emission data per country per year. Do this for all countries. To chart the carbon footprint for a specific year, you need the `carbon` attribute from the response. Note that for some countries data for a specific year is missing.
+3. Put the received secret in the `.env` file as the `VITE_API_CREDENTIALS`
+
+4. Use the 2 API calls provided in the store to get a list of countries and to get emission data per country per year. Do this for all countries. To chart the carbon footprint for a specific year, you need the `carbon` attribute from the response. Note that for some countries data for a specific year is missing.
 
 **Suggestions**
 
+- We suggest spending max 4 hours on this task. The goal is not to deliver a complete application but to have code for discussion. It's up to the candidate to scope the work how they see fit.
 - Consider first defining the data structure that you intend to use to create the chart.
 - Use the types defined in `src/typings/Country.ts` to help you
 - Talk about your approach.
