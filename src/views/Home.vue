@@ -1,6 +1,7 @@
 <template>
   <main>
     <h1>Altruistiq frontend tech assessment</h1>
+    <p>Please check the console for initial API logs</p>
   </main>
 </template>
 
@@ -24,9 +25,14 @@
     methods: {
       async getData() {
         try {
-          const data = await this.dataStore.getCountry(1000)
+          // get all countries
+          const countries = await this.dataStore.getCountries()
 
-          console.log(data)
+          // get data for a single country
+          const data = await this.dataStore.getCountry(229)
+
+          console.log('countries', countries)
+          console.log('data for single country (UK)', data)
         } catch (err) {
           console.error(err)
         }

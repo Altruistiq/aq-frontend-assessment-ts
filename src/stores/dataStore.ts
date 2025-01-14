@@ -11,9 +11,10 @@ export const useDataStore = defineStore('data', {
   actions: {
     async getCountries() {
       const { data } = await axios.get<Country[]>('https://api.footprintnetwork.org/v1/countries', {
-        headers: {
-          Authorization: API_CREDENTIALS,
-        },
+        auth: {
+          username: 'any-user-name',
+          password: API_CREDENTIALS
+        }
       })
 
       return data
@@ -24,9 +25,10 @@ export const useDataStore = defineStore('data', {
       const { data } = await axios.get<CountryEmissionsForYear[]>(
         `https://api.footprintnetwork.org/v1/data/${countryCode}/all/EFCpc`,
         {
-          headers: {
-            Authorization: API_CREDENTIALS,
-          },
+          auth: {
+            username: 'any-user-name',
+            password: API_CREDENTIALS
+          }
         }
       )
 
